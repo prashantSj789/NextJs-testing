@@ -13,7 +13,7 @@ module.exports = {
   testDir: './tests',
   timeout: 30000,
   use: {
-    baseURL: 'http://192.168.1.4:3000',
+    baseURL: 'http://localhost:3000',
   },
 };
 

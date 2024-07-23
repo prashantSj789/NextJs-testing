@@ -22,7 +22,7 @@ jobs:
    - name: Build the app
      run: npm run build
    - name: run the app first 
-     run: npx playwright test
+     run: npm run start &
    - uses: actions/upload-artifact@v2
      if: always()
      with:
