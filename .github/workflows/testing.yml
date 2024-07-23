@@ -22,9 +22,7 @@ jobs:
    - name: Build the app
      run: npm run build
    - name: run the app first 
-     run: |
-        pm2 start ecosystem.config.js
-        npx playwright test
+     run: npx playwright test
    - uses: actions/upload-artifact@v2
      if: always()
      with:
