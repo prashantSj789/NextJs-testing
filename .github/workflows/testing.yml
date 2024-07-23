@@ -21,7 +21,7 @@ jobs:
      run: npm install pm2 -g
    - name: Build the app
      run: npm run build
-   - name: run the app first
+   - name: run the app first 
      run: pm2 start ecosystem.config.js
    - name: Run Playwright tests
      run: npx playwright test
