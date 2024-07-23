@@ -1,12 +1,21 @@
 import { defineConfig, devices } from "@playwright/test";
 import path from "path";
+import dns from "dns";
 
+dns.setDefaultResultOrder("ipv4first");
 // Use process.env.PORT by default and fallback to port 3000
 const PORT = process.env.PORT || 3000;
 
 // Set webServer.url and use.baseURL with the location of the WebServer respecting the correct set port
 const baseURL = `http://localhost:${PORT}`;
-
+// playwright.config.js
+module.exports = {
+  testDir: './tests',
+  timeout: 30000,
+  use: {
+    baseURL: 'http://localhost:3000',
+  },
+};
 // Reference: https://playwright.dev/docs/test-configuration
 export default defineConfig({
   // Timeout per test
@@ -72,5 +81,6 @@ export default defineConfig({
       name: "Mobile Safari",
       use: devices["iPhone 12"],
     },
+    
   ],
 });
