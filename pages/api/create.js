@@ -11,7 +11,7 @@ export default function handler(req, res) {
     data.push(user);
     res.status(201).json(user);
   } 
-  // else {
-  //   res.status(405).json({ message: 'Method not allowed' });
-  // }
+  else {
+    res.status(405).json({ message: 'Method not allowed' });
+  }
 }
