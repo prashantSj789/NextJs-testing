@@ -1,5 +1,5 @@
 // pages/api/read.js
-let data = ["rakesh singh"];
+let data = ["rakesh singh","ritu singh"];
 
 export default function handler(req, res) {
   if (req.method === 'GET') {
