@@ -27,6 +27,13 @@ test.describe('CRUD API Tests', () => {
     console.log(responseBody);
     console.log("Test1")
   });
+  test('Create an item get', async ({ request }) => {
+    const response = await request.get('/api/read');
+    expect(response.ok()).toBeTruthy();
+    const responseBody = await response.json();
+    console.log(responseBody);
+    console.log("Test1")
+  });
 
 });
 
