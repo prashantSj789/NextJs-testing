@@ -7,4 +7,4 @@ module.exports = {
             watch: false,
         },
     ],
-};
+
