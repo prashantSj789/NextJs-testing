@@ -16,6 +16,7 @@ module.exports = {
     baseURL: 'http://localhost:3000',
   },
 };
+
 // Reference: https://playwright.dev/docs/test-configuration
 export default defineConfig({
   // Timeout per test
